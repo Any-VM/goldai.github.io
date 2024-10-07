@@ -1,0 +1,122 @@
+@import "https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&family=Source+Code+Pro:wght@300;400;700&display=swap";
+
+:root {
+    --fg-color: #f8f8f2;
+    --hover-color: #88d3ff;
+    --theme-color: #2d388a;
+    --bg-color1: #0f0f20;
+    --bg-color2: #8a872d;
+    --bg-color3: #eeee66;
+}
+
+html,
+body,
+.container {
+    height: 100%;
+    font-family: raleway, source sans pro, helvetica neue, sans-serif;
+    color: var(--fg-color)
+}
+
+h1 {
+    font-size: 36pt;
+    font-weight: 700;
+    font-family: raleway, sans-serif
+}
+
+h2 {
+    font-size: 24pt;
+    font-weight: 400
+}
+
+a {
+    color: var(--fg-color);
+    text-decoration-line: underline;
+    text-decoration-style: dotted
+}
+
+a:hover {
+    color: var(--hover-color)
+}
+
+img path:hover {
+    fill: var(--hover-color)
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(var(--angle, 110deg), var(--bg-color1) 0%, var(--bg-color2) 50%, var(--bg-color3) 100%)
+}
+
+#content {
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 0;
+    padding-top: 15%;
+    justify-content: center
+}
+
+.texts {
+    margin: auto;
+    display: grid;
+    text-align: center;
+    justify-content: center
+}
+
+#name,
+#socials {
+    text-align: right
+}
+
+.left {
+    position: absolute;
+    width: 48%;
+    text-align: right
+}
+
+.right {
+    position: absolute;
+    text-align: left;
+    left: 52%;
+    width: 30%;
+    font-weight: 400
+}
+
+#content #socials img {
+    margin-top: 6px;
+    height: 32px
+}
+
+canvas {
+    height: 100%;
+    width: 100%;
+    transform: scale(1.5);
+    filter: blur(100px)
+}
+
+@media screen and (max-width:520px) {
+    canvas {
+        transform: scale(1);
+        filter: blur(70px);
+        min-height: 900px;
+        min-width: 700px
+    }
+
+    #content {
+        height: 100%;
+        overflow: auto
+    }
+
+    .texts {
+        margin-right: 2%
+    }
+
+    .nowrap {
+        white-space: nowrap
+    }
+}
